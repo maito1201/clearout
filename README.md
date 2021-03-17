@@ -1,5 +1,6 @@
 # clearout
-wrapper of fmt.Print with clear escape sequence
+#### wrapper of fmt.Print with clear escape sequence
+
 ![](./sample.gif)
 
 # usage
