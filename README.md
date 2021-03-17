@@ -11,11 +11,11 @@
 import "github.com/maito1201/clearout"
 
 func main() {
-    r := clearout.Output{}
+    cout := clearout.Output{}
     for i := 1; i <= 100; i++ {
-        r.Println("do something")
-        r.Printf("progress %v%%",i)
-        r.Render()
+        cout.Println("do something")
+        cout.Printf("progress %v%%",i)
+        cout.Render()
     }
 }
 ```
@@ -28,9 +28,9 @@ progress 100%
 ## with option
 
 ```main.go
-r := clearout.Output{Out: os.Stderr, Prefix: "prefix\n", Suffix: "suffix\n"}
-r.Println("message")
-r.Render()
+cout := clearout.Output{Out: os.Stderr, Prefix: "prefix\n", Suffix: "suffix\n"}
+cout.Println("message")
+cout.Render()
 ```
 
 ```
@@ -42,8 +42,8 @@ suffix
 ## method chain
 
 ```main.go
-r := clearout.Output{}
-r.Print(1).Println("2").Printf("%v", 3).WithPrefix("prefix\n").WithSuffix("suffix\n").Render()
+cout := clearout.Output{}
+cout.Print(1).Println("2").Printf("%v", 3).WithPrefix("prefix\n").WithSuffix("suffix\n").Render()
 ```
 
 ```
